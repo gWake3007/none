@@ -10,6 +10,8 @@
   grid-auto-rows: 240px;
   grid-gap: 12px;
   justify-content: center;
+  padding: 0;
+  list-style: none;
   margin-left: auto;
   margin-right: auto;
 }
@@ -22,13 +24,18 @@
 
 .gallery__image:hover {
   transform: scale(1.03);
+  filter: grayscale(0); 
+  transition: all 0.8s ease 0s;
 }
+
+/* filter & transition - для плавної сміни з чорнобілої картинки на кольорову при hover */
 
 .gallery__image {
   height: 100%;
   width: 100%;
   object-fit: cover;
   transition: transform var(--animation-duration) var(--timing-function);
+  filter: grayscale(1);
 }
 
 .gallery__link {
